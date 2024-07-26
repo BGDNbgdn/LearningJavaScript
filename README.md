@@ -1,5 +1,5 @@
 # LearningJavaScript
-This repository will be used by me during my learning of JavaScript programming language.
+Welcome to my JavaScript Learning Repository! This repository will serve as a dedicated space where I document and share my journey as I begin to learn JavaScript. As I progress through various tutorials, projects, and exercises, I will be using this repository to track my accomplishments, challenges, and discoveries. Here, you will find code samples, project notes, and reflections on my learning experiences. I hope to build a comprehensive record of my growth and development in JavaScript, and this repository will be a valuable resource for both my future reference and for anyone interested in following my learning path.
 
 July 26 2024 : First day of learning JS, passed basic JS course on an app called Encode in roughly 1h. 
 
