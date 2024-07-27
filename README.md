@@ -45,4 +45,30 @@ Here is a brief description of how the recursive binary search works:
 
 
 
-Third challenge :  Game guess the number with selectable number of tries, 
+Third challenge of the day:  GUESS THE NUMBER GAME.
+
+For my project, I developed a simple "Guess the Number" game using HTML, CSS, and JavaScript. The objective of the game is for the player to guess a randomly generated number within a given range and number of attempts based on the chosen difficulty level.
+
+JavaScript Functionality:
+   - The game logic is encapsulated in the `NumberGuess.js` file, which is executed once the DOM content is fully loaded.
+
+Game Initialization:
+     - Difficulty buttons are assigned event listeners. Clicking a difficulty button resets the game parameters:
+       - Easy: 1-20 with 4 lives.
+       - Medium: 1-50 with 6 lives.
+       - Hard: 1-100 with 8 lives.
+     - Upon selecting a difficulty, a new target number is generated and the game interface is updated.
+
+Game Mechanics:
+     - Update Frame: This function updates the game's display based on the current state (e.g., number of lives left, user guesses, and game messages).
+     -Guess Handling: When the player clicks the "Guess" button:
+       - The input is validated and compared with the target number.
+       - The number of lives is decremented for incorrect guesses, and feedback is provided.
+       - If the guess is correct, a victory message is shown.
+       - If the lives reach zero, the game ends with a "Game Over" message.
+     -Try Again: If the player runs out of lives or wishes to restart, they can click "Try Again," which reloads the page to reset the game.
+
+Key Learnings
+   - I learned how to dynamically update the DOM using JavaScript. 
+   - Adding event listeners to buttons allows for interactive user experiences. I used event listeners to handle user actions (e.g., button clicks) and to control the flow of the game.
+   - I used JavaScript's `Math.random()` method to generate random target numbers within different ranges, learning how to adapt this functionality for different difficulty levels.
