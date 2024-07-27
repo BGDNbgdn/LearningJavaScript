@@ -9,26 +9,22 @@
  */
 
 function BinarySearch(array, n) {
-	
-        let ind_start = 0;
-        let ind_end = array.length - 1;
+	let ind_start = 0;
+	let ind_end = array.length - 1;
 
-        while (ind_start<= ind_end){
-                let ind_mid = Math.floor((ind_start+ind_end)/2);
-                if (array[ind_mid]===n){
-                        return ind_mid;
-                } else if (array[ind_mid]<n){
-                        ind_start= ind_mid+1;
-                } else {
-                        ind_end = ind_mid-1;
-                }
-        
-
-        }
-        return -1
+	while (ind_start <= ind_end) {
+		let ind_mid = Math.floor((ind_start + ind_end) / 2);
+		if (array[ind_mid] === n) {
+			return ind_mid;
+		} else if (array[ind_mid] < n) {
+			ind_start = ind_mid + 1;
+		} else {
+			ind_end = ind_mid - 1;
+		}
+	}
+	return -1;
 }
 console.log(BinarySearch([1, 2, 5, 7], 2));
-
 
 // Binary Search implementation in JavaScript with recursion
 
@@ -42,22 +38,23 @@ console.log(BinarySearch([1, 2, 5, 7], 2));
  * @returns {number|null} - The index of the element if found, or null if not found or invalid input.
  */
 
-function RecursiveBinarySearch(array, n, ind_start, ind_end){
-        if (ind_start < 0 || ind_end >= array.length){
-                console.log('Error');
-                return null;
-        } if (ind_start>ind_end){
-                return null;
-        } let m = Math.floor((ind_start+ind_end)/2);
+function RecursiveBinarySearch(array, n, ind_start, ind_end) {
+	if (ind_start < 0 || ind_end >= array.length) {
+		console.log("Error");
+		return null;
+	}
+	if (ind_start > ind_end) {
+		return null;
+	}
+	let m = Math.floor((ind_start + ind_end) / 2);
 
-        if (array[m]<n){
-                return RecursiveBinarySearch(array,n,m+1,ind_end);
-        } else if (array[m]>n){
-                return RecursiveBinarySearch(array,n,ind_start,m-1);
-        } else {
-                return m
-        }
-};
+	if (array[m] < n) {
+		return RecursiveBinarySearch(array, n, m + 1, ind_end);
+	} else if (array[m] > n) {
+		return RecursiveBinarySearch(array, n, ind_start, m - 1);
+	} else {
+		return m;
+	}
+}
 
-console.log(RecursiveBinarySearch([1, 2, 5, 7], 4, 0, 3))
-
+console.log(RecursiveBinarySearch([1, 2, 5, 7], 2, 0, 3));
